@@ -1,0 +1,119 @@
+/* AdminDashboard.css */
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Dashboard Container */
+  /* Base Layout */
+.admin-dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 250px;
+    background-color: #2d4059; /* Dark Blue */
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-item {
+    padding: 10px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #f0f0f0;
+    background-color: #4a6572; /* Soft Blue */
+  }
+  
+  .menu-item:hover,
+  .menu-item.active {
+    background-color: #08d9d6; /* Teal */
+    color: #2d4059; /* Contrast */
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  /* Welcome Section */
+  .welcome-section {
+    background-color: #08d9d6; /* Teal */
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-section h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .welcome-section p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+  }
+  
+  /* Overview Section */
+  .overview-section {
+    margin-top: 20px;
+  }
+  
+  .overview-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #2d4059;
+  }
+  
+  .stats-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-card {
+    flex: 1;
+    min-width: 200px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #4a6572;
+  }
+  
+  .stat-card p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2d4059;
+  }
+  

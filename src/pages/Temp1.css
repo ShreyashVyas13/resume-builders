@@ -1,0 +1,269 @@
+/* Color scheme based on provided palette */
+:root {
+    --primary-color: #4CAF50; /* Green accent */
+    --secondary-color: #FF9800; /* Orange accent */
+    --bg-dark: #121212; /* Dark background */
+    --bg-secondary: #1E1E2F; /* Secondary dark background */
+    --text-light: #E0E0E0; /* Light text color */
+    --text-muted: #757575; /* Muted text color */
+}
+/* 
+  --primary-bg: #f4f4f9;
+  --header-bg: #333;
+  --accent-color: #4CAF50;
+  --text-color: #333;
+  --muted-text: #777;
+  --highlight-color: #ff9800;
+  --border-color: #ccc;
+
+*/
+  
+  /* Resume container */
+  .resume-container {
+    width: 80%;
+    margin: 3rem auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: var(--text-light);
+  }
+
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2rem;
+  }
+  
+  .header-text h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .header-text h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+  }
+  
+  /* Content */
+  .content {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  /* Left Column */
+  .left-column {
+    flex: 1;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+  }
+  
+  .section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .section p {
+    line-height: 1.6;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Right Column */
+  .right-column {
+    flex: 2;
+  }
+  
+  /* Education and Work Experience */
+  .right-column .section p {
+    margin-bottom: 1.2rem;
+  }
+  
+  .right-column .section strong {
+    color: var(--primary-color);
+  }
+  
+  .right-column .section h3 {
+    color: var(--primary-color);
+  }
+  /* Profile Image Section */
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Makes the image clickable */
+  }
+  table {
+    width: 100%; /* Ensure tables fit inside the page */
+    table-layout: fixed; /* Make sure table cells don't exceed the page */
+  }
+  
+  /* Profile Image Styling */
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for profile image */
+  .profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* File Input (Hidden) */
+  .file-input {
+    display: none; /* Hide the file input */
+  }
+  
+  .download-btn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .download-btn button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .download-btn button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .download-btn button:focus {
+    outline: none; /* Remove focus outline */
+  }
+/* Style for all editable inputs */
+.editable-input,
+.editable-textarea {
+  border: none; /* Remove default border */
+  border-bottom: 2px solid #333; /* Add bottom border for underline effect */
+  outline: none; /* Remove focus outline */
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 14px; /* Default font size for input and textarea */
+  width: 100%; /* Make the inputs and textareas take full width */
+}
+
+/* Style for name and title */
+.editable-header {
+  font-size: 24px; /* Larger font for name */
+  font-weight: bold; /* Make the name bold */
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+}
+
+/* Make text areas look cleaner */
+.editable-textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 80px; /* Set a minimum height */
+  font-size: 14px; /* Default font size for text area */
+}
+
+/* Button style for download resume */
+.download-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-btn button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 12px 20px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.download-btn button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.download-btn button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+@media print {
+    body {
+      width: 100%;
+      margin: 0;
+    }
+    .resume-container {
+      width: 100%; /* Ensure it uses the full width */
+      box-sizing: border-box;
+    }
+  }
+  
+  /* Adjustments for Small Screens */
+  @media (max-width: 768px) {
+    .profile-image {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .resume-container {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  
+    .content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-image {
+      margin-bottom: 1rem;
+    }
+  }
+  

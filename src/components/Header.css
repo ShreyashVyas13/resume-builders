@@ -1,0 +1,162 @@
+/* Root Variables for Dark Theme */
+:root {
+    --primary-bg: #121212;
+    --secondary-bg: #1E1E2F;
+    --accent: #4CAF50;
+    --secondary-accent: #FF9800;
+    --text-color: #E0E0E0;
+    --muted-text: #757575;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+    background-color: var(--primary-bg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+/* Mobile Menu */
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+    background-color: var(--text-color);
+}
+
+.close-icon {
+    font-size: 3rem;
+    color: var(--text-color);
+    display: block;
+}
+
+/* Navigation Links (when opened in mobile) */
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--accent);
+    color: var(--primary-bg);
+}
+
+/* Signup Button */
+.signup-btn {
+    background-color: var(--accent);
+    color: var(--primary-bg);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: var(--secondary-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .login-btn,
+    .signup-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .content-wrapper {
+        padding-top: 80px; /* Add space equal to navbar height */
+    }
+}
