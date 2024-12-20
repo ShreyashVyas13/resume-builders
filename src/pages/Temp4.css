@@ -1,0 +1,254 @@
+/* Main Container */
+.resumeee {
+  display: flex;
+  width: 850px;
+  margin: 40px auto;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Left Section */
+.leftt-section {
+  width: 35%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  position: relative;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background: linear-gradient(135deg, #d32f2f, #f44336);
+  z-index: 1;
+  border-top-left-radius: 15px;
+}
+
+.ribbon:after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 0;
+  border-width: 12px 12px 0 0;
+  border-style: solid;
+  border-color: #f44336 transparent transparent transparent;
+}
+/* Profile Image */
+.profile-image {
+  margin-top: 50px;
+  text-align: center; /* Center the profile image horizontally */
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Keep the circular shape */
+  border: none; /* No border */
+  box-shadow: none; /* No shadow */
+  object-fit: cover; /* Ensure the image fits within the circle */
+}
+
+.education-section,
+.skills-section,
+.languages-section {
+  margin: 25px 0;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.skills-section ul,
+.languages-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-section li,
+.languages-section li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills-section li::before,
+.languages-section li::before {
+  content: "•";
+  color: #d32f2f;
+  font-size: 18px;
+}
+
+.leftt-section .education-section p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Right Section */
+.right-section {
+  width: 65%;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.role {
+  font-size: 18px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.icon {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #d32f2f;
+}
+
+.about-section,
+.work-experiences {
+  margin-top: 35px;
+}
+
+.work-item {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.work-item h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.work-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.work-item {
+  background: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item {
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-item .icon {
+  font-size: 22px;
+  color: #f44336;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: none; /* Remove border */
+  background-color: #f4f4f4; /* Background color */
+  font-size: 14px; /* Font size */
+  color: #333; /* Text color */
+  border-radius: 8px; /* Optional: rounded corners */
+  resize: none; /* Optional: prevent resizing */
+  outline: none; /* Remove outline when focused */
+}
+
+textarea::placeholder {
+  color: #888; /* Light gray color for placeholder */
+  font-style: italic; /* Optional: italic placeholder text */
+}
+
+/* Button style for download resume */
+.download-btn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .download-btn button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .download-btn button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .download-btn button:focus {
+    outline: none; /* Remove focus outline */
+  }
+  /* Add to your existing styles */
+#resume-containerr {
+  max-width: 800px; /* Ensure the content fits within the A4 width */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+  

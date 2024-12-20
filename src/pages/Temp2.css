@@ -1,0 +1,211 @@
+
+.resume {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px; /* Increased padding for content breathing room */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Resume Header */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px; /* Spacing below the header */
+}
+
+.header-left .editable-title,
+.header-left .editable-subtitle {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none; /* Remove border */
+  outline: none; /* Remove focus outline */
+  background: transparent; /* Transparent background */
+  width: 100%; /* Full width */
+  margin-bottom: 10px; /* Spacing between inputs */
+}
+
+.editable-title {
+  font-size: 28px;
+  line-height: 1.2; /* Make sure the name doesn't cut off */
+  margin-bottom: 0;
+}
+
+.editable-subtitle {
+  font-size: 22px;
+  line-height: 1.2; /* Similar line-height adjustment for the title */
+  margin-bottom: 0;
+}
+
+.header-right .profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  cursor: pointer; /* Makes the image clickable */
+}
+
+.file-input {
+  display: none; /* Hides the file input */
+}
+
+/* Resume Content */
+.resume-content {
+  display: flex;
+  gap: 20px; /* Space between left and right columns */
+  margin-top: 20px;
+}
+
+.left-column {
+  width: 60%;
+  padding-right: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.right-column {
+  width: 40%;
+  padding-left: 20px;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 30px; /* Spacing between sections */
+}
+
+h2 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* Editable Inputs (for all sections) */
+input {
+  font-size: 14px;
+  color: #555;
+  border: none; /* Remove border */
+  outline: none; /* Remove focus outline */
+  background: transparent; /* Transparent background */
+  width: 100%; /* Full width */
+  margin-bottom: 10px; /* Spacing between inputs */
+}
+
+input::placeholder {
+  color: #aaa; /* Placeholder color */
+  font-style: italic; /* Placeholder styling */
+}
+
+ul {
+  list-style-type: disc;
+  margin: 0 0 10px 20px; /* Margin around lists for spacing */
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px; /* Space between list items */
+}
+
+ul li input {
+  font-size: 14px;
+  color: #555;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+ul li input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Work Items & Education Items */
+.work-item,
+.education-item {
+  margin-bottom: 20px; /* Spacing between work or education entries */
+}
+
+.date {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* References */
+.reference-item {
+  margin-bottom: 15px; /* Space between references */
+}
+
+/* General Styles */
+input {
+  font-size: 14px;
+  color: #555;
+  border: none; /* Remove border */
+  outline: none; /* Remove focus outline */
+  background: transparent; /* Transparent background */
+  width: 100%; /* Full width */
+  margin-bottom: 10px; /* Spacing between inputs */
+}
+
+input::placeholder {
+  color: #aaa; /* Placeholder color */
+  font-style: italic; /* Placeholder styling */
+}
+
+/* Disable default text display (if value is empty, only placeholder will show) */
+input:not(:placeholder-shown) {
+  color: #555; /* Normal text color when the user enters text */
+}
+
+input:placeholder-shown {
+  color: #aaa; /* Placeholder color when no text is entered */
+}
+input {
+  font-size: 14px;
+  color: #555;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Button style for download resume */
+.download-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-btn button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 12px 20px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.download-btn button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.download-btn button:focus {
+  outline: none; /* Remove focus outline */
+}

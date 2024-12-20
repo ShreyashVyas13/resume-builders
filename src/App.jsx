@@ -42,6 +42,9 @@ import About from "./pages/About";
 import Temp1 from "./pages/Temp1";
 import AdminDashboard from "./Admin/AdminDashboard";
 import AdminTemplates1 from "./Admin/AdminTemp1";
+import Temp2 from "./pages/Temp2";
+import Temp3 from "./pages/Temp3";
+import Temp4 from "./pages/Temp4";
 
 function App() {
   const location = useLocation();
@@ -56,7 +59,9 @@ function App() {
     <>
       {/* Conditionally Render Header */}
       {shouldShowHeaderFooter && <Header />}
-
+      <br />
+      <br />
+      <br />
       {/* Main Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -64,6 +69,9 @@ function App() {
         <Route path="/templates" element={<Templates />} />
         <Route path="/about" element={<About />} />
         <Route path="/temp1" element={<Temp1 />} />
+        <Route path="/temp2" element={<Temp2 />} />
+        <Route path="/temp3" element={<Temp3 />} />
+        <Route path="/temp4" element={<Temp4 />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admintemp1" element={<AdminTemplates1 />} />
       </Routes>

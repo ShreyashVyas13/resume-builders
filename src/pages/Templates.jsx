@@ -5,28 +5,28 @@ const templatesData = [
   { 
     id: 1, 
     name: 'Professional', 
-    img: '/images/template1.jpg',
+    img: '/images/template1.png',
     description: "A clean, professional template for business-oriented resumes.",
     route: '/temp1', // Set the route for each template
   },
   { 
     id: 2, 
     name: 'Creative', 
-    img: '/images/template2.png',
+    img: '/images/template2.jpg',
     description: "A modern and artistic template for creative fields.",
     route: '/temp2', // Set the route for each template
   },
   { 
     id: 3, 
     name: 'Modern', 
-    img: '/images/template3.png',
+    img: '/images/template3.jpg',
     description: "A sleek and minimal template for tech-savvy professionals.",
     route: '/temp3', // Set the route for each template
   },
   { 
     id: 4, 
     name: 'Minimalist', 
-    img: '/images/template4.png',
+    img: '/images/template4.jpg',
     description: "A simple yet elegant resume design for a clutter-free look.",
     route: '/temp4', // Set the route for each template
   },
