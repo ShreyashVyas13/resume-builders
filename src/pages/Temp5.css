@@ -1,0 +1,191 @@
+.resume-coontainer {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resume-heeader {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .resume-titlee {
+    font-size: 2.5rem;
+    color: #2b6cb0;
+    margin: 0;
+  }
+  
+  .resume-subtitle {
+    color: #2b6cb0;
+  }
+  
+  .resume-contact {
+    color: #555;
+  }
+  
+  .resume-about,
+  .resume-experience,
+  .resume-education,
+  .resume-skills {
+    margin-top: 20px;
+  }
+  
+  .resume-section-title {
+    color: #2b6cb0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .resume-text {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .resume-line {
+    border-left: 3px dotted #2b6cb0;
+    padding-left: 15px;
+    margin-left: 15px;
+  }
+  
+  .resume-experience-item {
+    margin-bottom: 15px;
+  }
+  
+  .resume-experience-year {
+    font-weight: bold;
+    color: #333;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    border: none;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  
+  .resume-experience-title {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    border: none;
+    width: 20%;
+  }
+  
+  .resume-experience-details {
+    color: #666;
+  }
+  
+  .resume-skills-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .resume-skill-name{
+    padding: 5px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    border: none;
+    width: 30%;
+  }
+  
+  .resume-skill-item {
+    margin-bottom: 10px;
+  }
+  
+  .resume-stars {
+    color: gold;
+    margin-left: 10px;
+
+  }
+  .resume-stars {
+    display: inline-flex;
+    cursor: pointer;
+  }
+  
+  .star-icon {
+    font-size: 20px;
+    color: lightgray;
+    margin-right: 4px;
+    transition: color 0.2s ease;
+  }
+  
+  .star-icon.filled {
+    color: gold;
+  }
+  .star-icon:hover,
+  .star-icon.filled:hover ~ .star-icon {
+    color: gold;
+  }
+  .resume-education-item {
+    margin-bottom: 15px;
+    
+  }
+  
+  .resume-education-year,
+  .resume-education-school,
+  .resume-education-degree {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    border: none;
+
+  }
+  
+  .resume-education-year {
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    border: none;
+  }
+  
+  .resume-education-school,
+  .resume-education-degree {
+    font-size: 1.1rem;
+  }
+  
+/* Button style for download resume */
+.download-btn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .download-btn button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .download-btn button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .download-btn button:focus {
+    outline: none; /* Remove focus outline */
+  }

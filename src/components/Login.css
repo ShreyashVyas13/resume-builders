@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #4CAF50;  /* Green accent */
+    --secondary-color: #FF9800;  /* Orange accent */
+    --bg-dark: #121212;  /* Dark background */
+    --bg-secondary: #1E1E2F;  /* Secondary dark background */
+    --text-light: #E0E0E0;  /* Light text color */
+    --text-muted: #757575;  /* Muted text color */
+    --accent-color: #08d9d6;  /* Teal accent color */
+  }
+  
+  /* Base Layout */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-dark);
+  }
+  
+  .login-form {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-form h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .login-form p {
+    margin-bottom: 25px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+    color: var(--text-light);
+  }
+  
+  .form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--accent-color);
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-muted);
+  }
+  
+  .signup-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-form {
+      padding: 25px;
+    }
+  
+    .login-form h2 {
+      font-size: 1.8rem;
+    }
+  
+    .form-group input {
+      padding: 10px;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+    }
+  }
+  

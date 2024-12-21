@@ -115,6 +115,21 @@
     background-color: var(--secondary-accent);
 }
 
+.logout-btn {
+    background-color: #f44336; /* Red color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #e53935; /* Darker red on hover */
+  }
+  
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {

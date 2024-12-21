@@ -25,14 +25,19 @@
 //         <Route path="/admin" element={<AdminDashboard />} />
 //         {/* <Route path="/contact" element={<Contact />} /> */}
 //       </Routes>
-      
+
 //       <Footer />
 //     </Router>
 //   );
 // }
 
 // export default App;
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Features from "./pages/Features";
@@ -41,10 +46,14 @@ import Templates from "./pages/Templates";
 import About from "./pages/About";
 import Temp1 from "./pages/Temp1";
 import AdminDashboard from "./Admin/AdminDashboard";
-import AdminTemplates1 from "./Admin/AdminTemp1";
 import Temp2 from "./pages/Temp2";
 import Temp3 from "./pages/Temp3";
 import Temp4 from "./pages/Temp4";
+import Temp5 from "./pages/Temp5";
+import Contact from "./pages/Contact";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
+import AuthMiddleware from "./middleware/AuthMiddleware";
 
 function App() {
   const location = useLocation();
@@ -53,7 +62,9 @@ function App() {
   const noHeaderFooterRoutes = ["/admin", "/admintemp1"];
 
   // Check if current location path is one of the no-header-footer routes
-  const shouldShowHeaderFooter = !noHeaderFooterRoutes.includes(location.pathname);
+  const shouldShowHeaderFooter = !noHeaderFooterRoutes.includes(
+    location.pathname
+  );
 
   return (
     <>
@@ -66,14 +77,24 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/features" element={<Features />} />
-        <Route path="/templates" element={<Templates />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/temp1" element={<Temp1 />} />
         <Route path="/temp2" element={<Temp2 />} />
         <Route path="/temp3" element={<Temp3 />} />
         <Route path="/temp4" element={<Temp4 />} />
+        <Route path="/temp5" element={<Temp5 />} />
+        <Route
+          path="/templates"
+          element={
+            <AuthMiddleware>
+              <Templates />
+            </AuthMiddleware>
+          }
+        />
         <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/admintemp1" element={<AdminTemplates1 />} />
       </Routes>
 
       {/* Conditionally Render Footer */}

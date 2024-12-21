@@ -1,6 +1,5 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./AdminDashboard.css";
-import AdminTemp1 from "./AdminTemp1"
 
 const AdminDashboard = () => {
   const [activeSection, setActiveSection] = useState("Overview");
@@ -14,10 +13,6 @@ const AdminDashboard = () => {
             <h2>Overview</h2>
             <div className="stats-container">
               <div className="stat-card">
-                <h3>Templates</h3>
-                <p>10 Templates Available</p>
-              </div>
-              <div className="stat-card">
                 <h3>Users</h3>
                 <p>2,356 Registered Users</p>
               </div>
@@ -26,13 +21,6 @@ const AdminDashboard = () => {
                 <p>127 Feedback Messages</p>
               </div>
             </div>
-          </div>
-        );
-      case "Templates":
-        return (
-          <div className="templates-section">
-            <h2>Templates</h2>
-            <AdminTemp1 />
           </div>
         );
       case "Users":
@@ -60,7 +48,7 @@ const AdminDashboard = () => {
       <div className="sidebar">
         <h2 className="sidebar-title">Admin Dashboard</h2>
         <ul className="sidebar-menu">
-          {["Overview", "Templates", "Users", "Feedback"].map((section) => (
+          {["Overview", "Users", "Feedback"].map((section) => (
             <li
               key={section}
               className={`menu-item ${activeSection === section ? "active" : ""}`}

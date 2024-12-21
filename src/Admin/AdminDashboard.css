@@ -1,119 +1,176 @@
-/* AdminDashboard.css */
+:root {
+  --primary-color: #4CAF50;  /* Green accent */
+  --secondary-color: #FF9800;  /* Orange accent */
+  --bg-dark: #121212;  /* Dark background */
+  --bg-secondary: #1E1E2F;  /* Secondary dark background */
+  --text-light: #E0E0E0;  /* Light text color */
+  --text-muted: #757575;  /* Muted text color */
+  --accent-color: #08d9d6;  /* Teal accent color */
+}
 
-/* General Styling */
-body {
-    margin: 0;
-    font-family: "Arial", sans-serif;
-  }
-  
-  /* Dashboard Container */
-  /* Base Layout */
+/* Base Layout */
 .admin-dashboard {
-    display: flex;
-    height: 100vh;
-    font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 270px;
+  background-color: var(--bg-secondary);
+  color: var(--text-light);
+  padding: 30px 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  border-right: 2px solid var(--primary-color);
+}
+
+.sidebar-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 15px;
+  margin: 12px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-light);
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background-color: var(--accent-color);
+  color: var(--bg-dark);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background-color: var(--bg-dark);
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.welcome-section {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-section h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.welcome-section p {
+  margin: 12px 0 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/* Overview Section */
+.overview-section {
+  margin-top: 40px;
+}
+
+.overview-section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+}
+
+.stat-card h3 {
+  margin: 0 0 15px;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+/* Users Section */
+.users-section {
+  margin-top: 40px;
+}
+
+.users-section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* Feedback Section */
+.feedback-section {
+  margin-top: 40px;
+}
+
+.feedback-section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    flex-direction: column;
   }
-  
-  /* Sidebar Styling */
+
   .sidebar {
-    width: 250px;
-    background-color: #2d4059; /* Dark Blue */
-    color: #ffffff;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-shadow: none;
+    border-right: none;
   }
-  
-  .sidebar-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .sidebar-menu {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu-item {
-    padding: 10px 15px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 5px;
-    color: #f0f0f0;
-    background-color: #4a6572; /* Soft Blue */
-  }
-  
-  .menu-item:hover,
-  .menu-item.active {
-    background-color: #08d9d6; /* Teal */
-    color: #2d4059; /* Contrast */
-  }
-  
-  /* Main Content */
+
   .main-content {
-    flex: 1;
-    background-color: #f9f9f9;
-    padding: 30px;
-    overflow-y: auto;
-  }
-  
-  /* Welcome Section */
-  .welcome-section {
-    background-color: #08d9d6; /* Teal */
-    color: #ffffff;
-    border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   .welcome-section h1 {
-    margin: 0;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
-  
-  .welcome-section p {
-    margin: 10px 0 0;
-    font-size: 1.2rem;
-  }
-  
-  /* Overview Section */
-  .overview-section {
-    margin-top: 20px;
-  }
-  
-  .overview-section h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    color: #2d4059;
-  }
-  
-  .stats-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
+
   .stat-card {
-    flex: 1;
-    min-width: 200px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 100%;
   }
-  
-  .stat-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.5rem;
-    color: #4a6572;
-  }
-  
-  .stat-card p {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #2d4059;
-  }
-  
+}
