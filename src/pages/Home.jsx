@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
@@ -15,7 +16,8 @@ const Home = () => {
             Create a standout resume with customizable templates and user-friendly tools.
           </p>
           <div className="hero-buttons">
-            <button className="btn primary-btn">Get Started</button>
+            <Link to={'/templates'} className="btn primary-btn" style={{textDecoration:'none', padding:'15px'}} >Get Started</Link>
+            {/* <button className="btn primary-btn">Get Started</button> */}
             <button className="btn secondary-btn">Learn More</button>
           </div>
         </div>
@@ -53,7 +55,8 @@ const Home = () => {
       {/* Call-to-Action Section */}
       <section className="cta">
         <h2>Ready to Create Your Resume?</h2>
-        <button className="btn primary-btn">Start Now</button>
+        <Link to={'/templates'} className="btn primary-btn" style={{textDecoration:'none'}} >Start Now</Link>
+        {/* <button className="btn primary-btn">Start Now</button> */}
       </section>
     </div>
     </div>
