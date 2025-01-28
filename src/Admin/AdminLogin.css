@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #4caf50; /* Green accent */
+    --secondary-color: #ff9800; /* Orange accent */
+    --bg-dark: #121212; /* Dark background */
+    --bg-secondary: #1e1e2f; /* Secondary dark background */
+    --text-light: #e0e0e0; /* Light text color */
+    --text-muted: #757575; /* Muted text color */
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-dark);
+    padding: 1rem;
+  }
+  
+  .login-card {
+    background-color: var(--bg-secondary);
+    padding: 50px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  
+  .login-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-form {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    align-items: center;
+  }
+  
+  .form-group {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--text-muted);
+    border-radius: 0.5rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 4px var(--primary-color);
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #43a047;
+  }
+  
+  .login-button:active {
+    transform: scale(0.98);
+  }
+  
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 2rem;
+    }
+  
+    .login-title {
+      font-size: 1.8rem;
+    }
+  
+    .input-field {
+      font-size: 0.9rem;
+    }
+  
+    .login-button {
+      font-size: 0.9rem;
+    }
+  }
+}

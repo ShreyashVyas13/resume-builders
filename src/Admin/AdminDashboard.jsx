@@ -185,6 +185,7 @@ import axios from "axios";
 import "./AdminDashboard.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Navigate } from "react-router-dom";
 
 const AdminDashboard = () => {
   const [activeSection, setActiveSection] = useState("Overview");
@@ -219,6 +220,12 @@ const AdminDashboard = () => {
       fetchOverviewData();
     }
   }, [activeSection]);
+  const handleLogout = () => {
+    localStorage.removeItem("isAdminLoggedIn"); 
+    Navigate("/admin"); 
+  };
+  
+  
 
   // Fetch user data when "Users" section is active
   useEffect(() => {
@@ -602,7 +609,8 @@ const AdminDashboard = () => {
       <div className="main-content">
         <div className="welcome-section">
           <h1>Welcome to the Admin Panel</h1>
-          <p>Manage and monitor your website effectively.</p>
+          {/* <p>Manage and monitor your website effectively.</p> */}
+          <button className="btn-logout" onClick={handleLogout}>Logout</button>
         </div>
         {renderSectionContent()}{" "}
         {/* Dynamically renders the selected section */}

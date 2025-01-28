@@ -54,12 +54,14 @@ import Contact from "./pages/Contact";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import AuthMiddleware from "./middleware/AuthMiddleware";
+import AdminLogin from "./Admin/AdminLogin";
+import ProtectedRoute from "./Admin/ProtectedRoute";
 
 function App() {
   const location = useLocation();
 
   // Define routes where Header and Footer should not appear
-  const noHeaderFooterRoutes = ["/admin", "/admintemp1"];
+  const noHeaderFooterRoutes = ["/admindashboard", "/admintemp1", "/admin"];
 
   // Check if current location path is one of the no-header-footer routes
   const shouldShowHeaderFooter = !noHeaderFooterRoutes.includes(
@@ -94,7 +96,15 @@ function App() {
             </AuthMiddleware>
           }
         />
-        <Route path="/admin" element={<AdminDashboard />} />
+         <Route
+          path="/admindashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/admin" element={<AdminLogin />} />
       </Routes>
 
       {/* Conditionally Render Footer */}
